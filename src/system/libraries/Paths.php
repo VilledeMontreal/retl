@@ -13,7 +13,7 @@ namespace retl\system\libraries;
 */
 /**
  * Librairy of helper methods related to paths and the file system.
- * Should only contain static methods and class constant.
+ * Should only contain static methods and class constants.
  */
 class Paths
 {
