@@ -14,8 +14,6 @@ use \retl\helpers\Paths;
  --------------------------------------------------------------------------
 */
 /**
- * A plan is a DAO and a model for RETL plans.
- *
  * A RETL plan is a set of declarative instructions for transfering data from a list of data 
  * sources to a list of data destinations. Each source/destination may be single database table or
  * a single file, etc. Every source/destination must be given an alias name for identification
@@ -28,14 +26,13 @@ use \retl\helpers\Paths;
  *    (each destination record must be formatted for almost direct importation into a destination).
  *
  *    This is a serialised, declarative pipeline of functions. Functions are usually defined in a
- *    separate file, outside of the plan. Each function must be readily callable or else be defined 
- *    in a script located in directory "retl/functions".
+ *    separate file, outside of the plan. Function must be readily callable.
  *  - A descriptions of data structures expected by each destination.
  *
- * Although a RETL plan expects data from multiple sources and outputs records for multiple
- * destinations, an input record (called a source record) MUST represent a single object from
- * source and an output record (called a destination record) MUST represent a single object
- * in a destination. The reason a plan accepts multiple sources and destinations stires
+ * Although a RETL plan expects data from multiple sources and outputs data to multiple
+ * destinations, the input record (called a source record) is a single object representing all
+ * source data and the output record (called a destination record) is a single object
+ * representing all destination data. This simplifies function interfaces and the likes.
  */
 class Plan
 {
