@@ -1,6 +1,5 @@
 {
     "name": "VilledeMontreal/retl",
-    "version": "0.0.1",
     "description": "Reversible ETL package - under dev",
     "autoload": {
         "psr-4": {
