@@ -1,5 +1,5 @@
 {
-    "name": "VilledeMontreal/retl",
+    "name": "villedemontreal/retl",
     "description": "Reversible ETL package - under dev",
     "autoload": {
         "psr-4": {
