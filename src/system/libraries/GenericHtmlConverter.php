@@ -129,13 +129,13 @@ class GenericHtmlConverter
     *
     * - String: Escape string and convert newlines to <br/>
     * - Object: Try the following scenarios in order.
-    *    1- If method exists "toHtml": Use return value, as provided (no additionnal escaping).
+    *    1- If method exists "toHtml": Use raw return value (no additionnal escaping).
     *    2- If method exists "__toString": Handle as if string. See above.
     *    3- Else: Use function var_export() and escape resulting string.
     * - Array: For each array item, display the key (escaped) and pass the item to toGenericHtmlTable
     *          This method is recursive. However, it will NOT stop when arrays contain cycles
     *          (memory references that refer to previously visited items). Make sure your arrays
-    *          don't contain recursive memory references (i.e.: the usual case).
+    *          don't contain recursive memory references.
     * - Other: Use function var_export() and escape resulting string.
     * 
     * Usage note: You must provide the external table openning and closing tags. Row and cell tags
