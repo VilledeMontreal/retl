@@ -106,12 +106,7 @@ class Paths
     */
    public static function makeDirOrDie($path) {
       @ mkdir($path)
-      or die(
-          sprintf(
-              __('%1$s %2$s'), __("Can't create folder", self::PLUGIN_LNAME),
-              $path
-          )
-      );
+      or die("Can't create directory: ".$path);
    }
 
     /**
